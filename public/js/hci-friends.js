@@ -10,7 +10,18 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	$('.name').click(function(event){
+		event.preventDefault();
+		    // In an event handler, $(this) refers to 
+    // the object that triggered the event 
+    //$(this).css("background-color", "#7fff00" );
+
+		$(this).text(anagrammedName($(this).text()));
+
+	});
 }
+
+
 
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
